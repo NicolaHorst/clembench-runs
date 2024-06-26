@@ -93,3 +93,55 @@ The turn object contains an action object with the key type. This action type ca
 | v1.6              | 1590               | 260                                    | 1610            | 29                     |
 | v1.6_backends     | 179                | 45                                     | 346             | 20                     |
 | v1.6_quantized    | 180                | 31                                     | 182             | 17                     |
+
+### Imagegame
+
+| Benchmark Version          | Number of Episodes | Number of Successfully Played Episodes | 
+|----------------------------|--------------------|----------------------------------------|
+| v0.9                       | 440                | 35                                     | 
+| v1.0                       | 1640               | 88                                     |
+| v1.5                       | 1600               | 94                                     |
+| v1.5_quantized             | 320                | 400                                    |
+| v1.6                       | 2280               | 128                                    | 
+| v1.6_backends              | 240                | 1                                      | 
+| v1.6_quantized             | 240                | 1                                      | 
+
+-> 747 successful episodes
+
+
+### Referencegame:
+
+| Benchmark Version          | Number of Episodes | Number of Successfully Played Episodes | 
+|----------------------------|--------------------|----------------------------------------|
+| v0.9                       | 440                | 141                                    | 
+| v1.0                       | 1640               | 434                                    |
+| v1.5                       | 7200               | 2769                                   |
+| v1.5_quantized             | 1440               | 400                                    |
+| v1.6                       | 10260              | 4344                                   | 
+| v1.6_backends              | 1080               | 551                                    | 
+| v1.6_quantized             | 1080               | 480                                    | 
+| _v1.6_multimodal_          |_1620_              | _628_                                  | 
+
+-> 9747 successful episodes
+
+
+### Private Shared
+| Benchmark Version | Number of Episodes | Number of Successfully Played Episodes | Number of turns | Accuracy | Perfect Episodes (acc 1.0) | Perfect Turns (Episode acc=1.0) |
+|-------------------|--------------------|----------------------------------------|-----------------|----------|----------------------------|---------------------------------|
+| v0.9              | 898                | 139                                    | 1234            | 85.99    | 4                          | 24                              |
+| v1.0              | 4096               | 695                                    | 6485            | 74.76    | 46                         | 366                             |
+| v1.5              | 3800               | 761                                    | 7056            | 78.16    | 69                         | 529                             |
+| v1.5_quantized    | 800                | 112                                    | 1212            | 73.13    | 5                          | 30                              |
+| v1.6              | 5100               | 1068                                   | 9803            | 80.06    | 104                        | 799                             |
+| v1.6_backends     | 600                | 291                                    | 2646            | 78.93    | 21                         | 126                             |
+| v1.6_quantized    | 600                | 279                                    | 2469            | 73.38    | 11                         | 66                              |
+
+### Overview all games
+
+Barplot of played episodes benchmark versions 0.9-1.0
+
+![alt text](Plots/barplot_v10.png "image Title")
+
+Barplot of played episodes benchmark versions 1.5-1.6 (including quantized, backends and multimodal results)
+
+![alt text](Plots/barplot_v16.png "image Title")
