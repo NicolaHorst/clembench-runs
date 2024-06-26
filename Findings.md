@@ -61,6 +61,8 @@ The turn object contains an action object with the key type. This action type ca
 | v1.6_backends     | 360                | 224                                    | 326             | 53                     |
 | v1.6_quantized    | 360                | 162                                    | 193             | 49                     |
 
+-> 3481 Successfully Played Episodes
+
 ### Wordle No Clue No Critic
 | Benchmark Version | Number of Episodes | Number of Successfully Played Episodes | Number of turns | Number of target words |
 |-------------------|--------------------|----------------------------------------|-----------------|------------------------|
@@ -71,6 +73,8 @@ The turn object contains an action object with the key type. This action type ca
 | v1.6              | 1590               | 95                                     | 467             | 27                     |
 | v1.6_backends     | 180                | 10                                     | 62              | 5                      |
 | v1.6_quantized    | 180                | 3                                      | 21              | 2                      |
+
+-> 199 Successfully Played Episodes
 
 ### Wordle With Clue No Critic
 | Benchmark Version | Number of Episodes | Number of Successfully Played Episodes | Number of turns | Number of target words |
@@ -83,6 +87,8 @@ The turn object contains an action object with the key type. This action type ca
 | v1.6_backends     | 180                | 36                                     | 111             | 14                     |
 | v1.6_quantized    | 180                | 42                                     | 117             | 15                     |
 
+-> 892 Successfully played episodes
+
 ### Wordle With Clue and Critic
 | Benchmark Version | Number of Episodes | Number of Successfully Played Episodes | Number of turns | Number of target words |
 |-------------------|--------------------|----------------------------------------|-----------------|------------------------|
@@ -93,6 +99,8 @@ The turn object contains an action object with the key type. This action type ca
 | v1.6              | 1590               | 260                                    | 1610            | 29                     |
 | v1.6_backends     | 179                | 45                                     | 346             | 20                     |
 | v1.6_quantized    | 180                | 31                                     | 182             | 17                     |
+
+-> 764 Successfully Played Episodes
 
 ### Imagegame
 
@@ -135,6 +143,8 @@ The turn object contains an action object with the key type. This action type ca
 | v1.6              | 5100               | 1068                                   | 9803            | 80.06    | 104                        | 799                             |
 | v1.6_backends     | 600                | 291                                    | 2646            | 78.93    | 21                         | 126                             |
 | v1.6_quantized    | 600                | 279                                    | 2469            | 73.38    | 11                         | 66                              |
+
+-> 220 Perfecly played Episodes (acc = 1.0)
 
 ### Overview all games
 
