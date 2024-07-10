@@ -146,7 +146,7 @@ The turn object contains an action object with the key type. This action type ca
 
 -> 220 Perfecly played Episodes (acc = 1.0)
 
-### Overview all games
+## Overview all games
 
 Barplot of played episodes benchmark versions 0.9-1.0
 
@@ -155,3 +155,13 @@ Barplot of played episodes benchmark versions 0.9-1.0
 Barplot of played episodes benchmark versions 1.5-1.6 (including quantized, backends and multimodal results)
 
 ![alt text](Plots/barplot_v16.png "image Title")
+
+
+## Distribution of Successfully Played Episodes per Model
+![alt text](Plots/Distribution_of_Successfully_Played_Episodes_v0_9-1_0.png "image Title")
+![alt text](Plots/Distribution_of_Successfully_Played_Episodes_v1_5-1_6.png "image Title")
+
+## Top 10 Models (most successfully played episodes) among all games
+![alt text](Plots/Barchart_Top_k_Models_v0_9-1_0.png "image Title")
+![alt text](Plots/Barchart_Top_k_Models_v1_5-1_6.png "image Title")
+
