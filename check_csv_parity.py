@@ -22,10 +22,10 @@ def check_csv_parity(root_folder) -> Tuple[List, List, List, List]:
             print(f"{cur_model} in raw.csv, but has no directory for {root_folder}!")
             if cur_model not in raw_csv_models_without_directory:
                 raw_csv_models_without_directory.append(cur_model)
-    # checking results.csv:
+    # checking results_no_rev.csv:
     results_csv_models: list = list()
     results_csv_models_without_directory: list = list()
-    results_csv_path = os.path.join(root_folder, "results.csv")
+    results_csv_path = os.path.join(root_folder, "results_no_rev.csv")
     with open(results_csv_path, 'r', encoding='utf-8') as results_csv_file:
         results_csv = results_csv_file.read()
     results_csv_lines = results_csv.split("\n")
@@ -36,7 +36,7 @@ def check_csv_parity(root_folder) -> Tuple[List, List, List, List]:
         if cur_model not in results_csv_models:
             results_csv_models.append(cur_model)
         if cur_model not in model_directories:
-            print(f"{cur_model} in results.csv, but has no directory for {root_folder}!")
+            print(f"{cur_model} in results_no_rev.csv, but has no directory for {root_folder}!")
             if cur_model not in results_csv_models_without_directory:
                 results_csv_models_without_directory.append(cur_model)
     # check for model directories that are not covered in the CSVs:
@@ -48,7 +48,7 @@ def check_csv_parity(root_folder) -> Tuple[List, List, List, List]:
             if model_id not in model_directories_not_in_raw_csv:
                 model_directories_not_in_raw_csv.append(model_id)
         if model_id not in results_csv_models:
-            print(f"{cur_model} has directory, but is missing in results.csv for {root_folder}!")
+            print(f"{cur_model} has directory, but is missing in results_no_rev.csv for {root_folder}!")
             if model_id not in model_directories_not_in_results_csv:
                 model_directories_not_in_results_csv.append(model_id)
 
@@ -57,13 +57,13 @@ def check_csv_parity(root_folder) -> Tuple[List, List, List, List]:
         print(f"{len(raw_csv_models_without_directory)} models in raw.csv without directory for {root_folder}.")
         issue = True
     if results_csv_models_without_directory:
-        print(f"{len(results_csv_models_without_directory)} models in results.csv without directory for {root_folder}.")
+        print(f"{len(results_csv_models_without_directory)} models in results_no_rev.csv without directory for {root_folder}.")
         issue = True
     if model_directories_not_in_raw_csv:
         print(f"{len(model_directories_not_in_raw_csv)} models with directory missing in raw.csv for {root_folder}.")
         issue = True
     if model_directories_not_in_raw_csv:
-        print(f"{len(model_directories_not_in_results_csv)} models with directory missing in results.csv for {root_folder}.")
+        print(f"{len(model_directories_not_in_results_csv)} models with directory missing in results_no_rev.csv for {root_folder}.")
         issue = True
     if not issue:
         print(f"Full parity of model directories and CSVs for {root_folder}!")
